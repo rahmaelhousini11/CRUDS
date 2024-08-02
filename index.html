@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="w-75 mx-auto py-5">
+        <h2 class="my-3">store managment</h2>
+        <label for="productNameInPut" class="text-capitalize">product name</label>
+        <input type="text" id="productNameInPut" class="form-control mb-4" />
+
+        <label for="productPriceInPut" class="text-capitalize">product Price</label>
+        <input type="number" id="productPriceInPut" class="form-control mb-4" />
+
+        <label for="productCategoryInPut" class="text-capitalize">product Catogry</label>
+        <input type="text" id="productCategoryInPut" class="form-control mb-4" />
+
+        <label for="productDescInPut" class="text-capitalize">product Desc</label>
+        <textarea type="text" id="productDescInPut" class="form-control mb-4"></textarea>
+
+        <button id="addbtn" onclick="addproduct();" class="btn w-100 btn-primary">Add product</button>
+        <button id="updatebtn" onclick="updateProduct()" class="btn w-100 btn-warning d-none">update product</button>
+    </div>
+<div class="w-75 mx-auto">
+    <input  oninput="searchProduct(this.value);" type="text" class="form-control" placeholder="search for product" id="searchinput">
+</div>
+    <div class="w-75 pt-4 mx-auto">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Desc</th>
+                    <th>Updat</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tBody">
+            </tbody>
+        </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
